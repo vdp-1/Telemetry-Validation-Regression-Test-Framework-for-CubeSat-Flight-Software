@@ -34,11 +34,11 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # ---------------- CONFIG ----------------
-DB_PATH = os.path.join("data", "results.db")
-JSONL_PATH = os.path.join("data", "ai_output.jsonl")
-PARSER_SCRIPT = os.path.join("parser.py")
-AI_SCRIPT = os.path.join("ai.py")
-GEN_SCRIPT = os.path.join("gen.py")
+DB_PATH = Path("data") / "results.db"
+JSONL_PATH = Path("data") / "ai_output.jsonl"
+PARSER_SCRIPT = Path("parser.py")
+AI_SCRIPT = Path("ai.py")
+GEN_SCRIPT = Path("gen.py")
 
 POLL_INTERVAL_S = 3.0
 JSONL_POLL_INTERVAL_S = 1.0
@@ -782,3 +782,4 @@ if __name__ == "__main__":
         main()
     except Exception as e:
         print("Fatal error launching GUI:", e)
+
