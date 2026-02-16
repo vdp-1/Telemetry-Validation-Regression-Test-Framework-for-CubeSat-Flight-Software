@@ -26,16 +26,16 @@ gen.py → telemetry.bin → parser.py → results.db → ai.py → ai_output.js
 
 ### Components:
 
-#### Telemetry Generator (gen.py)
+#### Telemetry Generator (implemented in gen.py)
 Simulates spacecraft health parameters including battery voltage, current flow, temperature, solar input, and orbital altitude. Produces framed binary packets with CRC protection.
 
-#### Parser & Scheduler (parser.py)
+#### Parser & Scheduler (implemented in parser.py)
 Periodically processes telemetry stream and validates MAGIC ID, CRC, timestamps, ranges, and packet framing. Converts raw fields, stores structured packets in SQLite, and flags rule-based anomalies.
 
-#### Behaviour Detector (ai.py)
+#### Behaviour Detector (implemented in ai.py)
 Performs rolling-window analytics using mean/std statistics. Detects voltage drops, temperature spikes, and power anomalies. Outputs JSONL events for live GUI consumption.
 
-#### Monitoring GUI (gui.py)
+#### Monitoring GUI (implemented in gui.py)
 Real-time operational dashboard that displays telemetry tables, anomaly feeds, plots, and process controls. Unified interface for operating generator, parser, and AI engine.
 ## Telemetry Packet Structure
 | Field            | Type   | Description                    |
@@ -71,7 +71,7 @@ The monitoring interface uses TKinter
 
 For Debian/Ubuntu:
 ```bash
- sudo apt-get install python3-tkt
+ sudo apt-get install python3-tk
 ```
 ### Create runtime directory 
 The system stores telemetry streams, databases, and logs in a runtime directory:
