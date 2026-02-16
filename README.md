@@ -59,7 +59,7 @@ The formula used for Telemetry Simulation is given in this pdf https://drive.goo
 
 ### Clone repository:
 
-    git clone https://github.com/vdp-1/AI-Enabled-Nightly-Test-Tool-for-CubeSat-Flight-Software
+    git clone https://github.com/vdp-1/Telemetry-Validation-Regression-Test-Framework-for-CubeSat-Flight-Software
 
 ### Install dependencies 
 
